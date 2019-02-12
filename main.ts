@@ -71,7 +71,7 @@ namespace mouseBot {
 
     //% block="Setze Farbe von allen RGB-LED auf %color"
     //% color.defl=Red
-    export function showColor(color:colors) {
+    export function showColor(colorLEDs:colors) {
     } 
 
     //% block="Setze Farbe von RGB-LED %ledNumber auf %color"
@@ -98,7 +98,7 @@ namespace mouseBot {
 
     //% block="Farbe von Linienfolger %lineFollower"
     export function getColorOfLinefollower(lineFollower: mouseBotLineFollowers): colors {
-        let color= colors.Red
-        return color;
+        let colorLine= colors.Red
+        return colorLine;
     }    
 }
