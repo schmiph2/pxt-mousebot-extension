@@ -7,5 +7,5 @@ MIT License
 
 ## Supported targets
 
-* for PXT/Calliope
+* for PXT/microbit
 
