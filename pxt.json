@@ -1,5 +1,5 @@
 {
-    "name": "mouseBot",
+    "name": "pxt-mouseBot",
     "version": "0.1.0",
     "description": "A Microsoft MakeCode package for ZHAW mouseBot module",
     "license": "MIT",
