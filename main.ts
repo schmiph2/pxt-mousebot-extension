@@ -18,7 +18,7 @@ enum mouseBotLineFollowers {
 
 //% block="LED-Farben"
 //% color="#0064A2"
-enum colors {
+enum colorsLEDs {
     //% block=Rot
     Red = 0xFF0000,
     //% block=Orange
@@ -40,8 +40,7 @@ enum colors {
     //% block=Aus
     Black = 0x000000
 }
-
-//% color="#0064A2"
+//% weight=5 color=#0064A2 icon="\uf110"
 namespace mouseBot {
 
 
@@ -71,12 +70,12 @@ namespace mouseBot {
 
     //% block="Setze Farbe von allen RGB-LED auf %color"
     //% color.defl=Red
-    export function showColor(colorLEDs:colors) {
+    export function showColor(colorLEDs:colorsLEDs) {
     } 
 
     //% block="Setze Farbe von RGB-LED %ledNumber auf %color"
     //% ledNumber.min=0 ledNumber.max= 6 color.defl=Red
-    export function setColorOfLed(ledNumber: number,ledColor:colors) {
+    export function setColorOfLed(ledNumber: number,ledColor:colorsLEDs) {
     } 
     //% block="Setze Helligkeit von RGB-LED %ledNumber auf %brightness"
     //% ledNumber.min=0 ledNumber.max= 6 brightness.min=0 brightness.max=100 brightness.defl=20
@@ -94,11 +93,5 @@ namespace mouseBot {
     //% block="Rotiere RGB-LEDs um %rotate"
     //% rotate.defl=1
     export function rotateLEDs(ledsRotate: number) {
-    }
-
-    //% block="Farbe von Linienfolger %lineFollower"
-    export function getColorOfLinefollower(lineFollower: mouseBotLineFollowers): colors {
-        let colorLine= colors.Red
-        return colorLine;
-    }    
+    }   
 }
