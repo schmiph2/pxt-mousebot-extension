@@ -76,11 +76,11 @@ namespace mouseBot {
 
     //% block="Setze Farbe von RGB-LED %ledNumber auf %color"
     //% ledNumber.min=0 ledNumber.max= 6 color.defl=Red
-    export function setColorOfLed(ledNumber: number,color:colors) {
+    export function setColorOfLed(ledNumber: number,ledColor:colors) {
     } 
     //% block="Setze Helligkeit von RGB-LED %ledNumber auf %brightness"
     //% ledNumber.min=0 ledNumber.max= 6 brightness.min=0 brightness.max=100 brightness.defl=20
-    export function setBrightnessOfLed(ledNumber: number,brightness: number) {
+    export function setBrightnessOfLed(ledNumber: number,ledBrightness: number) {
     } 
 
     //% block="Zeige Regenbogen von Farbton %startC bis %endC"
@@ -89,11 +89,11 @@ namespace mouseBot {
     }
     //% block="Verschiebe RGB-LEDs um %shift"
     //% shift.defl=1
-    export function shiftLEDs(shift: number) {
+    export function shiftLEDs(ledsShift: number) {
     }
     //% block="Rotiere RGB-LEDs um %rotate"
     //% rotate.defl=1
-    export function rotateLEDs(rotate: number) {
+    export function rotateLEDs(ledsRotate: number) {
     }
 
     //% block="Farbe von Linienfolger %lineFollower"
