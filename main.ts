@@ -44,61 +44,10 @@ enum colors {
 //% color="#0064A2"
 namespace mouseBot {
 
-
-    //% block="Motor %motor mit Geschwindigkeit %velocity"
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
-    export function MotorX(motor: mouseBotMotors, velocity: number) {
-
-    }
-    //% block="Beide Motoren mit Geschwindigkeit %velocity"
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
-    export function MotorLeftandRight(velocity: number) {
-
-    }
-    //% block="Beide Motoren auslaufen lassen"
-    export function MotorLeftandRightRunDown() {
-        
-    }
-    //% block="Beide Motoren stoppen"
-    export function MotorLeftandRightStop() {
-        
-    }
-    //% block="Ultraschallsensor-Distanz (in cm)"
-    export function GetUltrasonicDist(): number {
-        let dist = 0
-        return dist;
-    }  
-
-    //% block="Setze Farbe von allen RGB-LED auf %color"
-    //% color.defl=Red
-    export function showColor(color:colors) {
-    } 
-
-    //% block="Setze Farbe von RGB-LED %ledNumber auf %color"
-    //% ledNumber.min=0 ledNumber.max= 6 color.defl=Red
-    export function setColorOfLed(ledNumber: number,color:colors) {
-    } 
-    //% block="Setze Helligkeit von RGB-LED %ledNumber auf %brightness"
-    //% ledNumber.min=0 ledNumber.max= 6 brightness.min=0 brightness.max=100 brightness.defl=20
-    export function setBrightnessOfLed(ledNumber: number,brightness: number) {
-    } 
-
-    //% block="Zeige Regenbogen von Farbton %startC bis %endC"
-    //% shift.defl=1
-    export function showRainbow(startC: number,endC: number) {
-    }
-    //% block="Verschiebe RGB-LEDs um %shift"
-    //% shift.defl=1
-    export function shiftLEDs(shift: number) {
-    }
-    //% block="Rotiere RGB-LEDs um %rotate"
-    //% rotate.defl=1
-    export function rotateLEDs(rotate: number) {
+    //% block="Addiere %a mit %b"
+    export function add(a: number, b: number):number {
+        return a+b;
     }
 
-    //% block="Farbe von Linienfolger %lineFollower"
-    export function getColorOfLinefollower(lineFollower: mouseBotLineFollowers): colors {
-        let color= colors.Red
-        return color;
-    }    
+
 }
