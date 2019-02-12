@@ -68,16 +68,16 @@ namespace mouseBot {
         return dist;
     }  
 
-    //% block="Setze Farbe von allen RGB-LED auf %color"
+    //% block="Setze Farbe von allen RGB-LED auf %colorLEDs"
     //% color.defl=Red
     export function showColor(colorLEDs:colorsLEDs) {
     } 
 
-    //% block="Setze Farbe von RGB-LED %ledNumber auf %color"
+    //% block="Setze Farbe von RGB-LED %ledNumber auf %ledColor"
     //% ledNumber.min=0 ledNumber.max= 6 color.defl=Red
     export function setColorOfLed(ledNumber: number,ledColor:colorsLEDs) {
     } 
-    //% block="Setze Helligkeit von RGB-LED %ledNumber auf %brightness"
+    //% block="Setze Helligkeit von RGB-LED %ledNumber auf %ledBrightness"
     //% ledNumber.min=0 ledNumber.max= 6 brightness.min=0 brightness.max=100 brightness.defl=20
     export function setBrightnessOfLed(ledNumber: number,ledBrightness: number) {
     } 
@@ -86,11 +86,11 @@ namespace mouseBot {
     //% shift.defl=1
     export function showRainbow(startC: number,endC: number) {
     }
-    //% block="Verschiebe RGB-LEDs um %shift"
+    //% block="Verschiebe RGB-LEDs um %ledsShift"
     //% shift.defl=1
     export function shiftLEDs(ledsShift: number) {
     }
-    //% block="Rotiere RGB-LEDs um %rotate"
+    //% block="Rotiere RGB-LEDs um %ledsRotate"
     //% rotate.defl=1
     export function rotateLEDs(ledsRotate: number) {
     }   
