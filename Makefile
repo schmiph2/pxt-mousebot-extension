@@ -7,4 +7,4 @@ deploy:
 	pxt deploy
 
 test:
-pxt test
+	pxt test
