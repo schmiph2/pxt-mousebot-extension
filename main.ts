@@ -41,25 +41,25 @@ namespace MBMotoren {
     //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorLeftandRight(velocity: number) {
-        pins.analogWritePin(AnalogPin.C16, velocity);
+        pins.analogWritePin(AnalogPin.C16, 0);
     }
-    //% blockId=motorleft block="Motor %mbmotor mit Geschwindigkeit %velocity"
+    //% blockId=motorX block="Motor %mbmotor| mit Geschwindigkeit %velocity"
     //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorLeft(mbmotor: MBMotor, velocity: number) {
-        pins.analogWritePin(AnalogPin.C16, velocity);
+        pins.analogWritePin(AnalogPin.C16, 0);
     }
 }    
 //% weight=0 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
     
     
-    //% blockId=setLEDCol block="Setze LED %lednum auf Farbe %ledcol"
+    //% blockId=setLEDCol block="Setze LED %lednum| auf Farbe %ledcol"
     //% weight=0 blockGap=10 
     //% lednum.min=0 lednum.max=6 lednum.defl=0
     //% ledcol.defl=MBPixelColors.Red
     export function setLEDtoColor(lednum: number, ledcol:MBPixelColors){
-        pins.analogWritePin(AnalogPin.C16, velocity);
+        pins.analogWritePin(AnalogPin.C16, 0);
     }
 }    
 
