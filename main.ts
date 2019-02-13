@@ -3,7 +3,7 @@
 // MIT License
 // Changes for Calliope Mini by M. Klein
 //
-//% weight=0 color=#87bc4b icon="\uf1eb" block="Test 2345"
+//% weight=0  color="#0064A2" icon="\uf544" block="mouseBot"
 namespace IR {
     export enum encodingType {
         //% block="NEC"
@@ -32,6 +32,11 @@ namespace IR {
         control.waitMicros(highTime);
         pins.analogWritePin(irLed, 0);
         control.waitMicros(lowTime);
+    }
+     //% block="Beide Motoren mit Geschwindigkeit %velocity"
+    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
+    export function MotorLeftandRight(velocity: number) {
+        
     }
 
     /**
