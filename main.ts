@@ -1,5 +1,4 @@
-
-//% weight=0  color="#0064A2" icon="\uf535" block="mouseBot"
+//% weight=100 color=#0064A2 icon="\uf4d7" block="mouseBot"
 namespace MB {
     //% blockId=motorleftright block="Beide Motoren mit Geschwindigkeit %velocity"
     //% weight=90 blockGap=10 
