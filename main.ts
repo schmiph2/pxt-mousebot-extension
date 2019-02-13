@@ -26,7 +26,14 @@ enum MBMotor {
     left=0,
     //% block=Rechts
     right=1
-}     
+}  
+enum MBLinefollower {
+    //% block=Links
+    left=0,
+    //% block=Rechts
+    right=1
+}      
+
 //% color=#0064A2 weight=0 icon="\uf1b9" block="MouseBot-Motoren"
 namespace MBMotoren {  
 
@@ -58,19 +65,13 @@ namespace MBLEDs{
 
 //% weight=0 color=#0064A2 icon="\uf4d7" block="MouseBot-Sensoren"
 namespace MBSensors{
-    enum MBLinefollower {
-        //% block=Links
-        left=0,
-        //% block=Rechts
-        right=1
-    }      
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
     //% weight=0 blockGap=10 
     export function ultrasonicDistance(): number{
         let dist=1;
         return dist;
     }
-    //% blockId=linefol block="Lese Linienfolger"
+    //% blockId=linefol block="Lese Linienfolger %lfol"
     //% weight=0 blockGap=10 
     export function linefollower(lfol: MBLinefollower): number {
         let dist=1;
