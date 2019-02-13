@@ -21,36 +21,59 @@ enum NeoPixelColors {
     Black = 0x000000
 }
 
+enum mB_linefollower {
+    //% block=Links
+    left=0,
+    //% block=Rechts
+    right=1
+}
 
 
-
-//% color=#008272 weight=30 icon="\uf1b9" block="MouseBot-Motoren"
+//% color=#0064A2 weight=0 icon="\uf1b9" block="MouseBot-Motoren"
 namespace MBMotoren {
     //% blockId=motorleftright block="Beide Motoren mit Geschwindigkeit %velocity"
-    //% weight=90 blockGap=10 
+    //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorLeftandRight(velocity: number) {
         pins.analogWritePin(AnalogPin.C16, velocity);
     }
     //% blockId=motorleftright block="Linker Motoren mit Geschwindigkeit %velocity"
-    //% weight=90 blockGap=10 
+    //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorLeft(velocity: number) {
         pins.analogWritePin(AnalogPin.C16, velocity);
     }
     //% blockId=motorleftright block="Rechter Motoren mit Geschwindigkeit %velocity"
-    //% weight=90 blockGap=10 
+    //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorRight(velocity: number) {
         pins.analogWritePin(AnalogPin.C16, velocity);
     }
 }    
-//% weight=100 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
+//% weight=0 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
-    //% blockId=motorleftright block="Setze LED %lednum auf Farbe %ledcol
-    //% weight=90 blockGap=10 
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
-    export function (lednum: number, ledcol:NeoPixelColors){
+    //% blockId=motorleftright block="Setze LED %lednum auf Farbe %ledcol"
+    //% weight=0 blockGap=10 
+    //% number.min=0 number.max=6 number.defl=0
+    //% ledcol.defl=NeoPixelColors.Red
+    export function setLEDtoColor(lednum: number, ledcol:NeoPixelColors){
         pins.analogWritePin(AnalogPin.C16, velocity);
+    }
+}    
+
+//% weight=0 color=#0064A2 icon="\uf110" block="MouseBot-Sensoren"
+namespace MBLEDs{
+    //% blockId=motorleftright block="Lese Ultraschallsensor-Distanz"
+    //% weight=0 blockGap=10 
+    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
+    export function ultrasonicDistance(){
+        let dist=1;
+        return dist;
+    }
+    //% blockId=motorleftright block="Lese Linienfolger"
+    //% weight=0 blockGap=10 
+    export function linefollower(lfol: mB_linefollower){
+        let dist=1;
+        return dist;
     }
 }    
