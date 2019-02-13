@@ -24,7 +24,7 @@ enum NeoPixelColors {
 
 
 
-//% color=#008272 weight=30 icon="\uf1b9"
+//% color=#008272 weight=30 icon="\uf1b9" block="MouseBot-Motoren"
 namespace MBMotoren {
     //% blockId=motorleftright block="Beide Motoren mit Geschwindigkeit %velocity"
     //% weight=90 blockGap=10 
@@ -45,7 +45,7 @@ namespace MBMotoren {
         pins.analogWritePin(AnalogPin.C16, velocity);
     }
 }    
-//% weight=100 color=#0064A2 icon="\uf110" block="RGB-LEDs"
+//% weight=100 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
     //% blockId=motorleftright block="Setze LED %lednum auf Farbe %ledcol
     //% weight=90 blockGap=10 
