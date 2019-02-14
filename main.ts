@@ -38,42 +38,42 @@ enum MBLinefollower {
 
 namespace motors {  
 
-    //% blockId=motorX block="Motor %mbmotor| mit Geschwindigkeit %velocity"
+    //% blockId=MotorPower block="Motor %mbmotor| mit Geschwindigkeit %velocity"
     //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function MotorPower(mbmotor: MBMotor, velocity: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }
-    //% blockId=motorX block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
+    //% blockId=MotorPowerDuration block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
     //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0
     export function MotorPowerDuration(mbmotor: MBMotor, velocity: number, dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }    
-    //% blockId=motorX block="Drehe nach Links"
+    //% blockId=turnLeft block="Drehe nach Links"
     //% weight=0 blockGap=10 
     export function turnLeft() {
         pins.analogWritePin(AnalogPin.C16, 0);
     }  
-    //% blockId=motorX block="Drehe nach Links für %dur ms"
+    //% blockId=turnLeftDuration block="Drehe nach Links für %dur ms"
     //% weight=0 blockGap=10 
     //% dur.min=0
     export function turnLeftDuration(dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }      
     
-    //% blockId=motorX block="Drehe nach Rechts für %dur ms"
+    //% blockId=turnRight block="Drehe nach Rechts für %dur ms"
     //% weight=0 blockGap=10 
     export function turnRight() {
         pins.analogWritePin(AnalogPin.C16, 0);
     }         
-    //% blockId=motorX block="Drehe nach Links für %dur ms"
+    //% blockId=turnRightDuration block="Drehe nach Links für %dur ms"
     //% weight=0 blockGap=10 
     //% dur.min=0
     export function turnRightDuration(dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }        
-    //% blockId=motorX block="Motor %mbmotor Stopp"
+    //% blockId=MotorStop block="Motor %mbmotor Stopp"
     //% weight=0 blockGap=10 
     export function MotorStop(mbmotor: MBMotor) {
         pins.analogWritePin(AnalogPin.C16, 0);
