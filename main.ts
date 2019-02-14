@@ -41,11 +41,49 @@ namespace motors {
     //% blockId=motorX block="Motor %mbmotor| mit Geschwindigkeit %velocity"
     //% weight=0 blockGap=10 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
-    export function MotorLeft(mbmotor: MBMotor, velocity: number) {
+    export function MotorPower(mbmotor: MBMotor, velocity: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }
+    //% blockId=motorX block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
+    //% weight=0 blockGap=10 
+    //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0
+    export function MotorPowerDuration(mbmotor: MBMotor, velocity: number, dur: number) {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }    
+    //% blockId=motorX block="Drehe nach Links"
+    //% weight=0 blockGap=10 
+    export function turnLeft() {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }  
+    //% blockId=motorX block="Drehe nach Links für %dur ms"
+    //% weight=0 blockGap=10 
+    //% dur.min=0
+    export function turnLeftDuration(dur: number) {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }      
     
-}    
+    //% blockId=motorX block="Drehe nach Rechts für %dur ms"
+    //% weight=0 blockGap=10 
+    export function turnRight() {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }         
+    //% blockId=motorX block="Drehe nach Links für %dur ms"
+    //% weight=0 blockGap=10 
+    //% dur.min=0
+    export function turnRightDuration(dur: number) {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }        
+    //% blockId=motorX block="Motor %mbmotor Stopp"
+    //% weight=0 blockGap=10 
+    export function MotorStop(mbmotor: MBMotor) {
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }    
+} 
+    
+    
+    
+    
+    
 //% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
     
@@ -57,8 +95,54 @@ namespace MBLEDs{
     export function setLEDtoColor(lednum: number, ledcol:MBPixelColors){
         pins.analogWritePin(AnalogPin.C16, 0);
     }
+    //% blockId=setLEDCol block="Setze alle LEDs auf Farbe %ledcol"
+    //% weight=0 blockGap=10 
+    //% ledcol.defl=MBPixelColors.Red
+    export function showColor(ledcol:MBPixelColors){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }   
+    //% blockId=setLEDCol block="Zeige Regenbogen von Farbton %colStart| bis %colStop"
+    //% weight=0 blockGap=10 colStart.min=0 colStart.max=255 colStop.min=0 colStop.max=255 colStart.defl=0 colStop.defl=255
+    export function showRainbow(colStart: number,colStop: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }      
+    //% blockId=setLEDCol block="Verschiebe LEDs um %shiftVal"
+    //% weight=0 blockGap=10 shiftVal.min=0 shiftVal.defl=1
+    export function shiftLEDs(shiftVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }     
+    
+    //% blockId=setLEDCol block="Rotiere LEDs um %rotVal"
+    //% weight=0 blockGap=10 rotVal.min=0 rotVal.defl=1
+    export function rotLEDs(rotVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }
+    //% blockId=setLEDCol block="Setze Helligkeit der LEDs auf %brightVal"
+    //% weight=0 blockGap=10 brightVal.min=0 brightVal.max=255 brightVal.defl=100
+    export function ledbrightness(brightVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }  
+    //% blockId=setLEDCol block="Setze Farbe der LED %startLED| bis %stopLED| auf %ledcol"
+    //% weight=0 blockGap=10 startLED.min=0 startLED.max=255 stopLED.min=0 stopLED.max=255 ledcol.defl=MBPixelColors.Red
+    export function ledVecColor(startLED: number,stopLED: number,ledcol: MBPixelColors){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }  
+    //% blockId=setLEDCol block="Rot %redVal Grün %greenVal| Blau %blueVal"
+    //% weight=0 blockGap=10
+    //% redVal.min=0 redVal.max=0 redVal.defl=255 greenVal.min=0 greenVal.max=0 greenVal.defl=0 blueVal.min=0 blueVal.max=0 blueVal.defl=255
+    export function ledVecColor(redVal: number,greenVal: number,blueVal: number): number{
+        pins.analogWritePin(AnalogPin.C16, 0);
+        let a=1;
+        return a;
+    }       
+    
 }    
 
+    
+    
+    
+    
+    
 namespace input{
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
     //% weight=0 blockGap=10 
@@ -66,21 +150,23 @@ namespace input{
         let dist=1;
         return dist;
     }
-    //% blockId=linefol block="Lese Linienfolger %lfol"
+    //% blockId=linefol block="Lese Farbe von Linienfolger %lfol"
     //% weight=0 blockGap=10 
     export function linefollower(lfol: MBLinefollower): number {
         let dist=1;
         return dist;
     }
-    
-    /**
-     * The arguments on event handlers are variables by default, but they can
-     * also be special "reporter" blocks that can only be used inside the event
-     * handler itself, mimicking the behavior of locally scoped variables.
-     */
-    //% block="on some event $handlerArg from $arg"
-    //% draggableParameters="reporter"
-    export function onEventWithHandlerReporterArgs(arg: number, handler: (handlerStringArg: string, handlerBoolArg: boolean) => void) {
-
+    //% blockId=linefol block="Schnurrhaare betätigt"
+    //% weight=0 blockGap=10 
+    export function whiskers(): boolean {
+        let pressed=true;
+        return pressed;
     }
+    //% blockId=linefol block="Schnautztaster betätigt"
+    //% weight=0 blockGap=10 
+    export function noseButton(): boolean {
+        let pressed=true;
+        return pressed;
+    }
+        
 }    
