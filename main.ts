@@ -46,7 +46,7 @@ namespace motors {
     }
     //% blockId=MotorPowerDuration block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
     //% weight=0 blockGap=10 
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0
+    //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0 dur.max=100000
     export function MotorPowerDuration(mbmotor: MBMotor, velocity: number, dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }    
@@ -57,7 +57,7 @@ namespace motors {
     }  
     //% blockId=turnLeftDuration block="Drehe nach Links für %dur ms"
     //% weight=0 blockGap=10 
-    //% dur.min=0
+    //% dur.min=0 dur.max=100000
     export function turnLeftDuration(dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }      
@@ -69,7 +69,7 @@ namespace motors {
     }         
     //% blockId=turnRightDuration block="Drehe nach Links für %dur ms"
     //% weight=0 blockGap=10 
-    //% dur.min=0
+    //% dur.min=0 dur.max=100000
     export function turnRightDuration(dur: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }        
@@ -102,18 +102,18 @@ namespace MBLEDs{
         pins.analogWritePin(AnalogPin.C16, 0);
     }   
     //% blockId=showRainbow block="Zeige Regenbogen von Farbton %colStart| bis %colStop"
-    //% weight=0 blockGap=10 colStart.min=0 colStart.max=255 colStop.min=0 colStop.max=255 colStart.defl=0 colStop.defl=255
+    //% weight=0 blockGap=10 colStart.min=0 colStart.max=255 colStart.defl=0 colStop.min=0 colStop.max=255 colStop.defl=255
     export function showRainbow(colStart: number,colStop: number){
         pins.analogWritePin(AnalogPin.C16, 0);
     }      
     //% blockId=shiftLEDs block="Verschiebe LEDs um %shiftVal"
-    //% weight=0 blockGap=10 shiftVal.min=0 shiftVal.defl=1
+    //% weight=0 blockGap=10 shiftVal.min=0 shiftVal.max=255 shiftVal.defl=1
     export function shiftLEDs(shiftVal: number){
         pins.analogWritePin(AnalogPin.C16, 0);
     }     
     
     //% blockId=rotLEDs block="Rotiere LEDs um %rotVal"
-    //% weight=0 blockGap=10 rotVal.min=0 rotVal.defl=1
+    //% weight=0 blockGap=10 rotVal.min=0 rotVal.max=255 rotVal.defl=1
     export function rotLEDs(rotVal: number){
         pins.analogWritePin(AnalogPin.C16, 0);
     }
@@ -129,7 +129,7 @@ namespace MBLEDs{
     }  
     //% blockId=ledVecColor block="Rot %redVal Grün %greenVal| Blau %blueVal"
     //% weight=0 blockGap=10
-    //% redVal.min=0 redVal.max=0 redVal.defl=255 greenVal.min=0 greenVal.max=0 greenVal.defl=0 blueVal.min=0 blueVal.max=0 blueVal.defl=255
+    //% redVal.min=0 redVal.max=255 redVal.defl=255 greenVal.min=0 greenVal.max=255 greenVal.defl=0 blueVal.min=0 blueVal.max=255 blueVal.defl=255
     export function ledVecColor(redVal: number,greenVal: number,blueVal: number): number{
         pins.analogWritePin(AnalogPin.C16, 0);
         let a=1;
