@@ -63,8 +63,7 @@ namespace MBLEDs{
     }
 }    
 
-//% weight=15 color=#0064A2 icon="\uf4d7" block="MouseBot-Sensoren"
-namespace MBSensors{
+namespace inputs{
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
     //% weight=0 blockGap=10 
     export function ultrasonicDistance(): number{
