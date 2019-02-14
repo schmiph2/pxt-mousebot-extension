@@ -34,8 +34,7 @@ enum MBLinefollower {
     right=1
 }      
 
-//% color=#0064A2 weight=25 icon="\uf1b9" block="MouseBot-Motoren"
-namespace MBMotoren {  
+namespace motors {  
 
     //% blockId=motorleftright block="Beide Motoren mit Geschwindigkeit %velocity"
     //% weight=0 blockGap=10 
