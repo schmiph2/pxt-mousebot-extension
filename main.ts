@@ -34,7 +34,7 @@ enum MBLinefollower {
     right=1
 }      
 
-//% color=#0064A2 weight=0 icon="\uf1b9" block="MouseBot-Motoren"
+//% color=#0064A2 weight=25 icon="\uf1b9" block="MouseBot-Motoren"
 namespace MBMotoren {  
 
     //% blockId=motorleftright block="Beide Motoren mit Geschwindigkeit %velocity"
@@ -50,7 +50,7 @@ namespace MBMotoren {
         pins.analogWritePin(AnalogPin.C16, 0);
     }
 }    
-//% weight=0 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
+//% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
     
     
@@ -63,7 +63,7 @@ namespace MBLEDs{
     }
 }    
 
-//% weight=0 color=#0064A2 icon="\uf4d7" block="MouseBot-Sensoren"
+//% weight=15 color=#0064A2 icon="\uf4d7" block="MouseBot-Sensoren"
 namespace MBSensors{
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
     //% weight=0 blockGap=10 
