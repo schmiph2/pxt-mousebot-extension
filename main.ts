@@ -26,7 +26,7 @@ enum MBMotor {
     left=0,
     //% block=Rechts
     right=1,
-    //% block=Links & Rechts
+    //% block="Links + Rechts"
     leftAndRight=2
 }  
 enum MBLinefollower {
@@ -44,12 +44,7 @@ namespace motors {
     export function MotorLeft(mbmotor: MBMotor, velocity: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }
-    export function motorPower(power: number) {
-    }
-    export function motorPower(command: MotorCommand.Coast) {
-    }   
-    export function dualMotorPower(motor: Motor,power: number) {
-    }       
+    
 }    
 //% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
 namespace MBLEDs{
