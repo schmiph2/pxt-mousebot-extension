@@ -62,7 +62,7 @@ namespace MBLEDs{
     }
 }    
 
-namespace inputs{
+namespace input{
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
     //% weight=0 blockGap=10 
     export function ultrasonicDistance(): number{
