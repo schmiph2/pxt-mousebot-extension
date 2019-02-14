@@ -36,113 +36,113 @@ enum MBLinefollower {
     right=1
 }      
 
-namespace motors {  
-
-    //% blockId=MotorPower block="Motor %mbmotor| mit Geschwindigkeit %velocity"
-    //% weight=0 blockGap=10 
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
-    export function MotorPower(mbmotor: MBMotor, velocity: number) {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }
-    //% blockId=MotorPowerDuration block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
-    //% weight=0 blockGap=10 
-    //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0 dur.max=100000
-    export function MotorPowerDuration(mbmotor: MBMotor, velocity: number, dur: number) {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }    
-    //% blockId=turnLeft block="Drehe nach Links"
-    //% weight=0 blockGap=10 
-    export function turnLeft() {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }  
-    //% blockId=turnLeftDuration block="Drehe nach Links für %dur ms"
-    //% weight=0 blockGap=10 
-    //% dur.min=0 dur.max=100000
-    export function turnLeftDuration(dur: number) {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }      
-    
-    //% blockId=turnRight block="Drehe nach Rechts für %dur ms"
-    //% weight=0 blockGap=10 
-    export function turnRight() {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }         
-    //% blockId=turnRightDuration block="Drehe nach Links für %dur ms"
-    //% weight=0 blockGap=10 
-    //% dur.min=0 dur.max=100000
-    export function turnRightDuration(dur: number) {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }        
-    //% blockId=MotorStop block="Motor %mbmotor Stopp"
-    //% weight=0 blockGap=10 
-    export function MotorStop(mbmotor: MBMotor) {
-        pins.analogWritePin(AnalogPin.C16, 0);
-    }    
-} 
-    
-    
-    
-    
-//    
-////% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
-//namespace MBLEDs{
-//    
-//    
-//    //% blockId=setLEDCol block="Setze LED %lednum| auf Farbe %ledcol"
+//namespace motors {  
+//
+//    //% blockId=MotorPower block="Motor %mbmotor| mit Geschwindigkeit %velocity"
 //    //% weight=0 blockGap=10 
-//    //% lednum.min=0 lednum.max=6 lednum.defl=0
-//    //% ledcol.defl=MBPixelColors.Red
-//    export function setLEDtoColor(lednum: number, ledcol:MBPixelColors){
+//    //% velocity.min=-100 velocity.max= 100 velocity.defl=30
+//    export function MotorPower(mbmotor: MBMotor, velocity: number) {
 //        pins.analogWritePin(AnalogPin.C16, 0);
 //    }
-//    //% blockId=showColor block="Setze alle LEDs auf Farbe %ledcol"
+//    //% blockId=MotorPowerDuration block="Motor %mbmotor| mit Geschwindigkeit %velocity| für %dur ms"
 //    //% weight=0 blockGap=10 
-//    //% ledcol.defl=MBPixelColors.Red
-//    export function showColor(ledcol:MBPixelColors){
+//    //% velocity.min=-100 velocity.max= 100 velocity.defl=30 dur.min=0 dur.max=100000
+//    export function MotorPowerDuration(mbmotor: MBMotor, velocity: number, dur: number) {
 //        pins.analogWritePin(AnalogPin.C16, 0);
-//    }   
-//    //% blockId=showRainbow block="Zeige Regenbogen von Farbton %colStart| bis %colStop"
-//    //% weight=0 blockGap=10 colStart.min=0 colStart.max=255 colStart.defl=0 colStop.min=0 colStop.max=255 colStop.defl=255
-//    export function showRainbow(colStart: number,colStop: number){
+//    }    
+//    //% blockId=turnLeft block="Drehe nach Links"
+//    //% weight=0 blockGap=10 
+//    export function turnLeft() {
+//        pins.analogWritePin(AnalogPin.C16, 0);
+//    }  
+//    //% blockId=turnLeftDuration block="Drehe nach Links für %dur ms"
+//    //% weight=0 blockGap=10 
+//    //% dur.min=0 dur.max=100000
+//    export function turnLeftDuration(dur: number) {
 //        pins.analogWritePin(AnalogPin.C16, 0);
 //    }      
-//    //% blockId=shiftLEDs block="Verschiebe LEDs um %shiftVal"
-//    //% weight=0 blockGap=10 shiftVal.min=0 shiftVal.max=255 shiftVal.defl=1
-//    export function shiftLEDs(shiftVal: number){
+//    
+//    //% blockId=turnRight block="Drehe nach Rechts für %dur ms"
+//    //% weight=0 blockGap=10 
+//    export function turnRight() {
 //        pins.analogWritePin(AnalogPin.C16, 0);
-//    }     
-//    
-//    //% blockId=rotLEDs block="Rotiere LEDs um %rotVal"
-//    //% weight=0 blockGap=10 rotVal.min=0 rotVal.max=255 rotVal.defl=1
-//    export function rotLEDs(rotVal: number){
+//    }         
+//    //% blockId=turnRightDuration block="Drehe nach Links für %dur ms"
+//    //% weight=0 blockGap=10 
+//    //% dur.min=0 dur.max=100000
+//    export function turnRightDuration(dur: number) {
 //        pins.analogWritePin(AnalogPin.C16, 0);
-//    }
-//    //% blockId=ledbrightness block="Setze Helligkeit der LEDs auf %brightVal"
-//    //% weight=0 blockGap=10 brightVal.min=0 brightVal.max=255 brightVal.defl=100
-//    export function ledbrightness(brightVal: number){
+//    }        
+//    //% blockId=MotorStop block="Motor %mbmotor Stopp"
+//    //% weight=0 blockGap=10 
+//    export function MotorStop(mbmotor: MBMotor) {
 //        pins.analogWritePin(AnalogPin.C16, 0);
-//    }  
-//    //% blockId=ledVecColor block="Setze Farbe der LED %startLED| bis %stopLED| auf %ledcol"
-//    //% weight=0 blockGap=10 startLED.min=0 startLED.max=255 stopLED.min=0 stopLED.max=255 ledcol.defl=MBPixelColors.Red
-//    export function ledVecColor(startLED: number,stopLED: number,ledcol: MBPixelColors){
-//        pins.analogWritePin(AnalogPin.C16, 0);
-//    }  
-//    //% blockId=ledVecColor block="Rot %redVal Grün %greenVal| Blau %blueVal"
-//    //% weight=0 blockGap=10
-//    //% redVal.min=0 redVal.max=255 redVal.defl=255 greenVal.min=0 greenVal.max=255 greenVal.defl=0 blueVal.min=0 blueVal.max=255 blueVal.defl=255
-//    export function ledVecColor(redVal: number,greenVal: number,blueVal: number): number{
-//        pins.analogWritePin(AnalogPin.C16, 0);
-//        let a=1;
-//        return a;
-//    }       
-//    
-//}    
-//
-//    
-//    
-//    
-//    
-//    
+//    }    
+//} 
+    
+    
+    
+    
+    
+//% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
+namespace MBLEDs{
+    
+    
+    //% blockId=setLEDCol block="Setze LED %lednum| auf Farbe %ledcol"
+    //% weight=0 blockGap=10 
+    //% lednum.min=0 lednum.max=6 lednum.defl=0
+    //% ledcol.defl=MBPixelColors.Red
+    export function setLEDtoColor(lednum: number, ledcol:MBPixelColors){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }
+    //% blockId=showColor block="Setze alle LEDs auf Farbe %ledcol"
+    //% weight=0 blockGap=10 
+    //% ledcol.defl=MBPixelColors.Red
+    export function showColor(ledcol:MBPixelColors){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }   
+    //% blockId=showRainbow block="Zeige Regenbogen von Farbton %colStart| bis %colStop"
+    //% weight=0 blockGap=10 colStart.min=0 colStart.max=255 colStart.defl=0 colStop.min=0 colStop.max=255 colStop.defl=255
+    export function showRainbow(colStart: number,colStop: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }      
+    //% blockId=shiftLEDs block="Verschiebe LEDs um %shiftVal"
+    //% weight=0 blockGap=10 shiftVal.min=0 shiftVal.max=255 shiftVal.defl=1
+    export function shiftLEDs(shiftVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }     
+    
+    //% blockId=rotLEDs block="Rotiere LEDs um %rotVal"
+    //% weight=0 blockGap=10 rotVal.min=0 rotVal.max=255 rotVal.defl=1
+    export function rotLEDs(rotVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }
+    //% blockId=ledbrightness block="Setze Helligkeit der LEDs auf %brightVal"
+    //% weight=0 blockGap=10 brightVal.min=0 brightVal.max=255 brightVal.defl=100
+    export function ledbrightness(brightVal: number){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }  
+    //% blockId=ledVecColor block="Setze Farbe der LED %startLED| bis %stopLED| auf %ledcol"
+    //% weight=0 blockGap=10 startLED.min=0 startLED.max=255 stopLED.min=0 stopLED.max=255 ledcol.defl=MBPixelColors.Red
+    export function ledVecColor(startLED: number,stopLED: number,ledcol: MBPixelColors){
+        pins.analogWritePin(AnalogPin.C16, 0);
+    }  
+    //% blockId=ledVecColor block="Rot %redVal Grün %greenVal| Blau %blueVal"
+    //% weight=0 blockGap=10
+    //% redVal.min=0 redVal.max=255 redVal.defl=255 greenVal.min=0 greenVal.max=255 greenVal.defl=0 blueVal.min=0 blueVal.max=255 blueVal.defl=255
+    export function ledVecColor(redVal: number,greenVal: number,blueVal: number): number{
+        pins.analogWritePin(AnalogPin.C16, 0);
+        let a=1;
+        return a;
+    }       
+    
+}    
+
+    
+    
+    
+    
+    
 //namespace input{
 //    //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
 //    //% weight=0 blockGap=10 
