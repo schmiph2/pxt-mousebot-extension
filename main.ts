@@ -87,7 +87,7 @@ namespace motors {
 
 
 
-//% weight=20 color=#0064A2 icon="\uf110" block="MouseBot-LEDs"
+//% weight=20 color=#0064A2 icon="\uf0eb" block="MouseBot-LEDs" //icon must be from list https://semantic-ui.com/elements/icon.html
 namespace MBLEDs {
 
 
