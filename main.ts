@@ -39,7 +39,7 @@ enum MBLinefollower {
 namespace motors {
 
     //% blockId=mb_motorPower block="Motor %mbmotor| mit Geschwindigkeit %velocity"
-    //% weight=0 blockGap=10 
+    //% weight=0 blockGap=50 
     //% velocity.min=-100 velocity.max= 100 velocity.defl=30
     export function mb_motorPower(mbmotor: MBMotor, velocity: number) {
         pins.analogWritePin(AnalogPin.C16, 0);
@@ -92,7 +92,7 @@ namespace MBLEDs {
 
 
     //% blockId=setLEDCol block="Setze LED %lednum| auf Farbe %ledcol"
-    //% weight=0 blockGap=10 
+    //% weight=0 blockGap=50 
     //% lednum.min=0 lednum.max=6 lednum.defl=0
     //% ledcol.defl=MBPixelColors.Red
     export function setLEDtoColor(lednum: number, ledcol: MBPixelColors) {
@@ -143,7 +143,7 @@ namespace MBLEDs {
 
 namespace input {
     //% blockId=ultrasonicDist block="Lese Ultraschallsensor-Distanz"
-    //% weight=0 blockGap=10 
+    //% weight=0 blockGap=50 
     export function ultrasonicDistance(): number {
         let dist = 1;
         return dist;
