@@ -1,5 +1,5 @@
 {
-    "name": "pxt-mousebot",
+    "name": "pxt-mousebot-extension",
     "version": "0.0.22",
     "description": "",
     "dependencies": {
