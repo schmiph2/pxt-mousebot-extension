@@ -93,7 +93,7 @@ namespace motors {
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
     //% parts="ledmatrix"
-    export function mb_MotorStop(mbmotor: MBMotor) {
+    export function showLED(ImageLiteral leds) {
         pins.analogWritePin(AnalogPin.C16, 0);
     }
 }
